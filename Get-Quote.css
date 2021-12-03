@@ -776,7 +776,7 @@
 .u-section-7 .u-image-1 {
   min-height: 286px;
   background-image: url("images/CopyofSurpriseGoingAwayPartyFacebookEventCover1.png");
-  background-position: 50% 50%;
+  background-position: 49.51% 100%;
 }
 
 .u-section-7 .u-container-layout-1 {
@@ -790,6 +790,7 @@
 
   .u-section-7 .u-image-1 {
     min-height: 236px;
+    background-size: auto 115%;
   }
 }
 
@@ -846,5 +847,5 @@
 }
 
 .u-section-8 .u-sheet-1 {
-  min-height: 268px;
+  min-height: 16px;
 }
