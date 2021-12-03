@@ -1,5 +1,5 @@
  .u-section-1 {
-  background-image: url("images/bannerdesignv3.PNG");
+  background-image: url("images/bannerdesignv3.PNG?rand=f10d");
   background-position: 50% 50%;
 }
 
@@ -665,4 +665,6 @@
   .u-section-4 .u-container-layout-1 {
     padding-top: 30px;
   }
+}.u-section-5 .u-sheet-1 {
+  min-height: 246px;
 }
