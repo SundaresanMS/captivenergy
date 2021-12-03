@@ -841,6 +841,10 @@
   .u-section-7 .u-image-1 {
     min-height: 204px;
   }
-}.u-section-8 .u-sheet-1 {
+} .u-section-8 {
+  background-image: none;
+}
+
+.u-section-8 .u-sheet-1 {
   min-height: 268px;
 }
