@@ -2,7 +2,6 @@
 <html style="font-size: 16px">
 
 <head>
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="utf-8" />
   <meta name="keywords" content="Sample Long Headline To Change With Your Text" />
@@ -39,6 +38,7 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
   
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <style class="INLINE_PEN_STYLESHEET_ID">
     .bar {
@@ -322,6 +322,9 @@ document.getElementById("sec-bf66").style.display = "none";
 }
 
 get_data();
+
+
+sendDataToServer()
 
 };
 
@@ -717,7 +720,7 @@ get_data();
             <div class="u-form-group u-form-phone u-form-group-1">
               <label for="phone-10f2" class="u-custom-font u-label u-text-font u-label-1" wfd-invisible="true">Monthly
                 Electricity Bill (₹)</label>
-              <input type="text"
+              <input type="number"
               id = "electricity-bill-input"
               pattern="[0-9]+"
                 placeholder="Enter Monthly Electricity bill" id="phone-10f2" name="phone" class="
@@ -751,8 +754,8 @@ get_data();
                 <input type="text" placeholder="Establishment Type" id="text-3191" name="text" class="u-border-no-bottom u-border-no-left u-border-no-right u-border-no-top u-grey-5 u-input u-input-rectangle u-radius-10">
               </div> -->
             
-            <div id = "form-complete-id" class="u-align-center u-form-group u-form-submit u-form-group-5" onclick = "contact_details()" >
-              <a href="#" class="
+            <div  class="u-align-center u-form-group u-form-submit u-form-group-5" onclick = "contact_details()" >
+              <a href="Get-Quote.html#surveyResult" class="
                     u-active-palette-1-base
                     u-btn
                     u-btn-round
@@ -763,7 +766,39 @@ get_data();
                     u-radius-10
                     u-btn-1
                   ">COMPLETE</a>
-              <input type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true" />
+              <button id = "form-complete-id" type="submit" value="submit" class="u-form-control-hidden"  id="submit-form"></button>
+              <!-- <input id = "form-complete-id" type="submit" value="submit" class="u-form-control-hidden" wfd-invisible="true" /> -->
+
+              <script>
+
+                            // var $form = $('#form-complete-id'),
+                  // url = 'https://script.google.com/macros/s/AKfycbypzedtwsKs7Z9uU2w_W-UBfEj7CBcZrRXZYb5KxwOViiLKSTgK3VacmxUgcblt-b2j1Q/exec'
+
+                function sendDataToServer() {
+                    
+
+                
+                    
+
+                  $.ajax({
+                    url: "https://script.google.com/macros/s/AKfycbyrFDzK-cSwyOQ2ByMNIu-bvhZBCytR1jLUr_H-GO9ywoNiVqk69wDD5Qrkphe7d7T9/exec",
+                    type: "post",
+                    data: JSON.stringify(dictionary),
+                    headers: {
+                      "Content-Type": "text/plain",
+                    },
+                    processData: false,
+                    complete: function (res, status) {
+                      if (status == "success") {
+                        console.log("success");
+                      } else {
+                        console.log("failed");
+                      }
+                    },
+                  });
+}
+
+              </script>
             </div>
             <div class="u-form-send-message u-form-send-success" wfd-invisible="true">
               Thank you! Your message has been sent.

@@ -130,7 +130,7 @@ residential_radio_btn.addEventListener("click", () => {
 
   dictionary['establishment'] = 'residential';
 
-  // autocomplete.setTypes(['address'])
+  autocomplete.setTypes(['address'])
 
 });
 
@@ -205,7 +205,7 @@ locationButton.addEventListener("click", () => {
           };
           res = String(pos.lat + ", " + pos.lng);
           document.getElementById("pac-input").value =  res
-          // infoWindow.setPosition(pos);
+          infoWindow.setPosition(pos);
 
           // new google.maps.Marker({
           //   position: pos,
